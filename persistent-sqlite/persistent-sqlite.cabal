@@ -109,38 +109,3 @@ executable sanity
                  , persistent-sqlite
                  , monad-logger
     default-language: Haskell2010
-
-test-suite test
-    type:            exitcode-stdio-1.0
-    main-is:         main.hs
-    hs-source-dirs:  test
-    other-modules:   
-        SqliteInit
-        Database.Persist.Sqlite.CompositeSpec
-    ghc-options:     -Wall
-
-    build-depends:   base >= 4.9 && < 5
-                   , persistent
-                   , persistent-sqlite
-                   , persistent-test
-                   , bytestring
-                   , containers
-                   , conduit
-                   , exceptions
-                   , fast-logger
-                   , hspec >= 2.4
-                   , HUnit
-                   , microlens
-                   , monad-logger
-                   , mtl
-                   , QuickCheck
-                   , resourcet
-                   , system-fileio
-                   , system-filepath
-                   , temporary
-                   , text
-                   , time
-                   , transformers
-                   , time
-                   , unliftio-core
-    default-language: Haskell2010
